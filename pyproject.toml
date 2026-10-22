@@ -1,0 +1,28 @@
+[project]
+name = "emma-gliner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "emma-wrapper>=0.1.14",
+    "gliner>=0.2.27",
+    "pandas>=2.3.3",
+    "rapidfuzz>=3.14.5",
+    "torch>=2.12.1",
+]
+
+[tool.uv.sources]
+emma-wrapper = { git = "https://github.com/AltFLanca/EMMa-Wrapper.git", rev = "c1d9a8cd6b09edb97325e8dd845c5100d7ffacca" }
+torch = [{ index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" }]
+torchvision = [{ index = "pytorch-cu126", marker = "sys_platform == 'linux' or sys_platform == 'win32'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]

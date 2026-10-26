@@ -1,7 +1,7 @@
 [project]
 name = "emma-gliner"
 version = "0.1.0"
-description = "Add your description here"
+description = "Explore product type extraction from EMMa product titles using GLiNER."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
